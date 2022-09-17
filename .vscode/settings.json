@@ -1,0 +1,6 @@
+{
+    "yaml.schemas": {
+        "file:///home/brian/.vscode_profiles/code-react/exts/atlassian.atlascode-2.10.12/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml",
+        "https://json.schemastore.org/github-action.json": "file:///home/brian/Desktop/works/dev-helper/.github/workflows/deploy.yml"
+    }
+}
