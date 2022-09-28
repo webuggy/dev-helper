@@ -1,19 +1,22 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import DefaultLayout from "./layout/DefaultLayout";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  createRoutesFromElements,
+} from "react-router-dom";
+import HomeScreen from "./screens/HomeScreen";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  return (
-    <div className="App">
-      <DefaultLayout>
-        <div className="w-full h-full ml-64">
-          <h1>Hello</h1>
-        </div>
-      </DefaultLayout>
-    </div>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route path="/" element={<DefaultLayout />}>
+      <Route path="/" element={<HomeScreen />} />
+    </Route>
+  )
+);
