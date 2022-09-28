@@ -23,7 +23,7 @@ const DefaultLayout = () => {
           </ul>
         </div>
       </div>
-      <div className="w-full h-full ml-64">
+      <div className=" pr-4 h-full ml-64">
         <Outlet />
       </div>
     </div>
