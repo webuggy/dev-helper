@@ -1,8 +1,10 @@
 import React, { Fragment } from "react";
+import { useNavigate } from "react-router-dom";
 import { IconComponentList } from "../../util/icon-list";
 import CustomIcon from "../Icon/CustomIcon";
 interface Prop {
   name: string;
+  path: string;
   items: ItemProp[];
 }
 interface ItemProp {
@@ -12,7 +14,8 @@ interface ItemProp {
   iconSize: number;
 }
 
-const NavigationItem = ({ name, items }: Prop) => {
+const NavigationItem = ({ name, items, path }: Prop) => {
+  const navigate = useNavigate();
   return (
     <Fragment>
       <li className="px-5">
@@ -24,9 +27,9 @@ const NavigationItem = ({ name, items }: Prop) => {
       </li>
       {items.map((el, i) => (
         <li key={i}>
-          <a
-            href={el.path}
-            className="ml-2 relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6"
+          <span
+            onClick={() => navigate(`/${path}/${el.path}`)}
+            className="hover:cursor-pointer  ml-2 relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6"
           >
             <CustomIcon
               icon={el.icon as IconComponentList}
@@ -35,7 +38,7 @@ const NavigationItem = ({ name, items }: Prop) => {
             <span className="ml-2 text-sm tracking-wide truncate ">
               {el.name}
             </span>
-          </a>
+          </span>
         </li>
       ))}
     </Fragment>

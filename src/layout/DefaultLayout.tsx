@@ -13,7 +13,12 @@ const DefaultLayout = () => {
         <div className="overflow-y-auto overflow-x-hidden flex-grow">
           <ul className="flex flex-col py-4 space-y-1">
             {navData.map((el, i) => (
-              <NavigationItem name={el.name} items={el.item} key={i} />
+              <NavigationItem
+                name={el.name}
+                items={el.item}
+                key={i}
+                path={el.path}
+              />
             ))}
           </ul>
         </div>
