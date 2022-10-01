@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import { navData } from "../api/data";
+import { navigationPath } from "../api/navigationPath";
 import NavigationItem from "../components/Navigation/NavigationItem";
 
 const DefaultLayout = () => {
@@ -8,11 +8,11 @@ const DefaultLayout = () => {
     <div className="min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased bg-gray-50 text-gray-800">
       <div className="fixed flex flex-col top-0 left-0 w-64 bg-white h-full border-r">
         <div className="flex items-center justify-center h-14 border-b">
-          <div>Sidebar Navigation By iAmine</div>
+          <div className="text-3xl font-bold">Dev Helper</div>
         </div>
         <div className="overflow-y-auto overflow-x-hidden flex-grow">
           <ul className="flex flex-col py-4 space-y-1">
-            {navData.map((el, i) => (
+            {navigationPath.map((el, i) => (
               <NavigationItem
                 name={el.name}
                 items={el.item}

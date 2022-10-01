@@ -6,7 +6,7 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import HomeScreen from "./screens/HomeScreen";
-import { navData } from "./api/data";
+import { navigationPath } from "./api/navigationPath";
 import { CustomScreen } from "./components/Screen/CustomScreen";
 import { ScreenComponentList } from "./util/screen-list";
 
@@ -20,7 +20,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<DefaultLayout />}>
       <Route path="/" element={<HomeScreen />} />
-      {navData.map((ele, i) => (
+      {navigationPath.map((ele, i) => (
         <Route path={ele.path} key={i}>
           {ele.item.map((navItem, j) => (
             <Route

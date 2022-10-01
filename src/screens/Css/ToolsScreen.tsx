@@ -1,14 +1,15 @@
 import React from "react";
-import ItemCard from "../../components/Card/ItemCard";
 import { css } from "../../api/data/data";
-const GeneratorScreen = () => {
+import ItemCard from "../../components/Card/ItemCard";
+
+const ToolsScreen = () => {
   return (
     <div className="flex flex-wrap justify-center mt-20">
-      {css.generator.map((el, i) => (
+      {css.tools.map((el, i) => (
         <ItemCard url={el} key={i} />
       ))}
     </div>
   );
 };
 
-export default GeneratorScreen;
+export default ToolsScreen;

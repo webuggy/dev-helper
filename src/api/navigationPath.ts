@@ -1,4 +1,4 @@
-export const navData = [
+export const navigationPath = [
   {
     name: "React",
     path: "react",
@@ -21,7 +21,7 @@ export const navData = [
         path: "ui-libraries",
         icon: "BiLibrary",
         iconSize: 22,
-        component: "ReactUILibraries",
+        component: "VueUILibrariesScreen",
       },
     ],
   },
@@ -35,6 +35,13 @@ export const navData = [
         icon: "BiLibrary",
         iconSize: 22,
         component: "CssGeneratorScreen",
+      },
+      {
+        name: "Tools",
+        path: "tools",
+        icon: "BiLibrary",
+        iconSize: 22,
+        component: "CssToolsScreen",
       },
     ],
   },
