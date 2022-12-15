@@ -40,6 +40,7 @@ export const css = {
     "https://bennettfeely.com/",
     "https://meyerweb.com/eric/tools/css/reset/",
     "https://flatuicolors.com/",
+    "https://branition.com/colors",
     "https://wickedbackgrounds.com/",
   ],
 };
